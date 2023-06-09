@@ -7,7 +7,7 @@ const App = () => {
   ];
   return (
     <div>
-      <Expenses arr={expenses}/>
+      <Expenses items={expenses}/>
     </div>
   );
 }
