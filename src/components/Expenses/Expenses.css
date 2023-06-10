@@ -6,3 +6,8 @@
     max-width: 95%;
     
   }
+  .noData{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
