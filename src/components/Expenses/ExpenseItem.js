@@ -9,7 +9,7 @@ const ExpenseItem = (props) => {
         setTitle('updated');
         console.log(title)
     }
-    console.log(title)
+    // console.log(title)
     return (
         <Card className="expense-item">
             <ExpenseDate date={props.date}/>
