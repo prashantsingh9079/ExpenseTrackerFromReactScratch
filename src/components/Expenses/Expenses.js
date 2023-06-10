@@ -3,6 +3,7 @@ import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpenseFilter';
 import React,{useState} from 'react';
+import ExpenseChart from './ExpenseChart';
 const Expenses = (props) => {
 
     const [filteredYear, setFilteredYear] = useState('2019')
@@ -22,6 +23,7 @@ const Expenses = (props) => {
         
         <Card className='expenses'>
             <ExpensesFilter selected={filteredYear} onSaveYear={saveYearHandler}/>
+            <ExpenseChart expenses={filteredExpenses}/>
             {filteredExpenses.length === 0 && <p className='noData'>No Data for Selected Year</p>}  
             { filteredExpenses.length>0 && filteredExpenses.map((item) =>{
                 return (<ExpenseItem key={item.id} title={item.title} date={item.date} amount={item.amount}/>)
