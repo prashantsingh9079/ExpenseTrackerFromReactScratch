@@ -7,9 +7,14 @@ const App = () => {
     { id: 'e3', title: "Shopping", amount: "6900", date: new Date(2023, 5, 9) },
     { id: 'e4', title: "Pizza", amount: "800", date: new Date(2023, 5, 10) }
   ];
+
+  const addExpenseHandler= (obj) =>{
+    console.log(obj);
+  }
+
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses}/>
     </div>
   );
